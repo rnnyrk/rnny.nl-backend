@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "PROJECT",
+      "script": "/home/USER/www/PROJECT/dist/server.js",
+      "cwd": "/home/USER/www/PROJECT",
+      "instances": INSTANCES,
+      "exec_mode": "cluster",
+      "max_memory_restart": "250M"
+    }
+  ]
+}
