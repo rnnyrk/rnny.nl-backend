@@ -9,9 +9,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpileOnly -r tsconfig-paths/register src/server.ts",
+    "start": "ts-node-dev --respawn --transpileOnly -r tsconfig-paths/register src/server.ts",
     "build": "npm run clean && tsc",
-    "start": "node -r ./tsconfig-paths-bootstrap.js dist/Server.js",
+    "prod": "node -r ./tsconfig-paths-bootstrap.js dist/server.js",
     "clean": "rimraf dist/",
     "lint": "tslint --project tsconfig.json"
   },

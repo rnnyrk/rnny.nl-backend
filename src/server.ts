@@ -27,7 +27,7 @@ const transporter = nodemailer.createTransport({
   auth: {
     user: secrets.email,
     pass: secrets.password,
-  }
+  },
 });
 
 app.post('/mail', async (req, res) => {
@@ -35,7 +35,6 @@ app.post('/mail', async (req, res) => {
 
   transporter.verify((error: string) => {
     if (error) {
-      console.error('error', error);
       res.status(500).json({ error: 'Error sending the message' });
     }
   });
@@ -50,7 +49,6 @@ app.post('/mail', async (req, res) => {
 
     await transporter.sendMail(mailOptions, (error: string) => {
       if (error) {
-        console.error('error', error);
         res.status(500).json({ error: 'Error sending the message' });
       } else {
         res.status(200).json({ message: 'Message was send succesfully' });
