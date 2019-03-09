@@ -29,9 +29,6 @@
       "modules/*": [
         "modules/*"
       ],
-      "database/*": [
-        "Database.ts"
-      ],
       "types/*": [
         "types/*"
       ]
