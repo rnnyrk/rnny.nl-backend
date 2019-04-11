@@ -1,6 +1,6 @@
 {
   "name": "rnny-backend",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Back-end repository of my new website",
   "author": "ronnyrook",
   "repository": {
@@ -11,7 +11,7 @@
   "scripts": {
     "start": "ts-node-dev --respawn --transpileOnly -r tsconfig-paths/register src/server.ts",
     "build": "npm run clean && tsc",
-    "prod": "node -r ./tsconfig-paths-bootstrap.js dist/server.js",
+    "server": "node -r ./tsconfig-paths-bootstrap.js dist/server.js",
     "clean": "rimraf dist/",
     "lint": "tslint --project tsconfig.json"
   },
