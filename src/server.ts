@@ -30,6 +30,10 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+app.get('*', (req, res) => {
+  res.status(403).send('<h1>Forbidden</h1><p>You don\'t have permission to access / on this server.</p>');
+});
+
 app.post('/mail', async (req, res) => {
   const values = req.body;
 
