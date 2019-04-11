@@ -44,7 +44,23 @@ app.post('/mail', async (req, res) => {
       from: `"${values.name}" <${values.email}>`,
       to: secrets.email,
       subject: 'Hello from ronnyrook.nl',
-      html: values.message,
+      html: `<h2>Er is een nieuw bericht van ronnyrook.nl</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td>Naam</td>
+            <td>${values.name}</td>
+          </tr>
+          <tr>
+            <td>E-mail</td>
+            <td>${values.email}</td>
+          </tr>
+          <tr>
+            <td>Bericht</td>
+            <td>${values.message}</td>
+          </tr>
+        </tbody>
+      </table>`,
     };
 
     await transporter.sendMail(mailOptions, (error: string) => {
