@@ -2,5 +2,6 @@
 .vscode/
 dist/
 node_modules/
+config/secrets.json
 src/config/secrets.json
 deploy.sh

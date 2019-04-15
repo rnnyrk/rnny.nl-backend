@@ -10,14 +10,7 @@ import secrets from 'config/secrets.json';
 const app = express();
 const port = process.env.PORT || 8888;
 
-app.use(compress());
-app.use(express.static(path.resolve(__dirname)));
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
 const whitelist = ['http://localhost:3000', 'https://rnny.nl'];
-
 app.use(cors({
   origin: (origin, callback) => {
     if (whitelist.indexOf(origin) !== -1) {
@@ -26,7 +19,14 @@ app.use(cors({
       callback(new Error('Not allowed by CORS'));
     }
   },
+  methods: ['POST'],
 }));
+
+app.use(compress());
+app.use(express.static(path.resolve(__dirname)));
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 const transporter = nodemailer.createTransport({
   host: secrets.host,

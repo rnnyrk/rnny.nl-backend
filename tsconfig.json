@@ -11,33 +11,15 @@
     "esModuleInterop": true,
     "baseUrl": "src",
     "paths": {
-      "config/*": [
-        "config/*"
-      ],
-      "controllers/*": [
-        "controllers/*"
-      ],
-      "entities/*": [
-        "entities/*"
-      ],
-      "helpers/*": [
-        "helpers/*"
-      ],
-      "services/*": [
-        "services/*"
-      ],
-      "modules/*": [
-        "modules/*"
-      ],
-      "types/*": [
-        "types/*"
-      ]
+      "config/*": ["config/*"],
+      "controllers/*": ["controllers/*"],
+      "entities/*": ["entities/*"],
+      "helpers/*": ["helpers/*"],
+      "services/*": ["services/*"],
+      "modules/*": ["modules/*"],
+      "types/*": ["types/*"]
     },
-    "lib": [
-      "esnext"
-    ]
+    "lib": ["esnext"]
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

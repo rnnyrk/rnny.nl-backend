@@ -4,9 +4,12 @@
       "name": "PROJECT",
       "script": "/home/USER/www/PROJECT/dist/server.js",
       "cwd": "/home/USER/www/PROJECT",
+      "node_args": "-r ./tsconfig-paths-bootstrap.js",
       "instances": INSTANCES,
-      "exec_mode": "cluster",
-      "max_memory_restart": "250M"
+      "env_production": {
+        "NODE_ENV": "production",
+        "APP_ENV": "production"
+      }
     }
   ]
 }
