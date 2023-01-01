@@ -21,7 +21,7 @@
     "cors": "2.8.5",
     "express": "4.16.4",
     "nodemailer": "5.1.1",
-    "tsconfig-paths": "^3.6.0"
+    "tsconfig-paths": "^3.10.1"
   },
   "devDependencies": {
     "@types/compression": "0.0.36",
